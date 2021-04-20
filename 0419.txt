@@ -1,0 +1,26 @@
+자바빈즈 액션태그
+
+setProperty
+getProperty
+
+요청 파라미터 관련 메소드 종류	  반환유형
+getParameter()			- String	: 요청 파라미터 값이 없으면 null 반환
+getParameterValues()	- String[]
+getParameterNames()		- java.util.Enumeration
+
+
+
+데이터를 보낼 때 두 가지 방법 <GET, POST 사용 html Form에서는ㄴ>
+GET : 요청 파라미터를 URL에 담아서 전달 / 사용자가 서버로 보낼 데이터인 입력하 값이 그대로 노출 <보안성 ↓>
+	  전송속도 빠름 / 전송할 수 있는 데이터의 크기 제한이 있음 (4086Byte) 
+	  ?를 기준으로 앞에 있는 것들이 url 뒤에 있는 것들이 요청 파라미터들
+POST : 요청 파라미터를 HTTP 프로토콜의 header에 담아서 전달 
+		사용자가 보내는 값이 어떤 값인지 보이지 않음 <보안에 신경을 쓴 방식> 보안에 완벽한 전송 방식은 아님
+		상대적으로 전송 속도가 느림 / 전송할 수 있는 데이터의 크기 제한이 없음
+HEAD
+PUT
+...
+
+process01.jsp 페이지는 내 컴퓨터에서만 접속할 수 있다.
+
+캐싱 - 클라이언트가 최초로 필요한 데이터를 서버로 요청 . 최초로 요청하고 서버가 전달한 데이터를 [캐시]에 저장

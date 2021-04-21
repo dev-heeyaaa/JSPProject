@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,14 +6,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h1>내장객체는 JSP 컨테이너가 생성해 준다.</h1>
-	<h2>내장객체를 사용해서 JSP 페이지 내에서 사용자의 요청을 핸들링 할 수 있다.</h2>
-	<h3>request 내장객체는 사용자의 요청과 관련된 정보를 담고있다.</h3>
-	
-	<hr>
-	<p>requests.getParameter("파라미터 이름") = <%request.getParameter("data"); %></p>
-	<p>requests.getParameter("파라미터 이름") = <%request.getParameter("value"); %></p>
-	<p>request.getRemoteAddr() = <%request.getRemoteAddr(); %></p>
+	<h3>회원가입</h3>
+	<form action="process.jsp" method="post"">
+		<!-- 입력 양식을 묶어서 보내는 form 태그 -->
+		<!-- 폼 태그 안에는 입력 가능한 태그들을 작성 -->
+		<!-- 폼 태그가 입력한 데이터를 서버로 보내줌 -->
+		<p>아이디 : <input type="text" name="id"> <input type="button" value="아이디 중복 검사"> </p>
+		<p>패스워드 : <input type="password" name="pw"> </p>
+		<p>비밀번호 확인 : <input type="password" name="pw2"></p>
+		<p>이름 : <input type="text" name="name"></p>
+		<p>연락처 : <input type="number" name="phone1">-
+		<input type="number" name="phone2">-
+		<input type="number" name="phone3"></p>
+		<p>성별 :<input type="radio" name="gender" value="남성">남성
+		 <input type="radio" name="gender" value="여성">여성
+		 </p>
+		<p>취미 : 독서<input type="checkbox" name="hobby1">
+		운동 <input type="checkbox" name="hobby2">
+		영화 <input type="checkbox" name="hobby3"></p>
+		<p><input type="submit" value="전송"><input type="reset" value="다시쓰기"> </p>
+	</form>
 </body>
 </html>

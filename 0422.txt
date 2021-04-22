@@ -1,0 +1,3 @@
+폼 데이터 철이하기
+요청 파라미더의 값 받기
+String 변수 = request.getParameter(요청 파라미터 이름);

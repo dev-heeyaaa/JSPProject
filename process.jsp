@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	String reading = request.getParameter("readeing");
+	String exercise = request.getParameter("exercise");
+	String movie = request.getParameter("movie");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,14 +11,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		request.setCharacterEncoding("UTF-8");
-	
-		String name = request.getParameter("name");
-		
-	%>
-	
-	<p>이름 : <%=name %></p>
-	
+	<p>독서 : <%=reading %></p>
+	<p>운동 : <%=exercise %></p>
+	<p>영화 : <%=movie %></p>
 </body>
 </html>

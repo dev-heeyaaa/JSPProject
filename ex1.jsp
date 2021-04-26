@@ -3,36 +3,57 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ex1</title>
 </head>
 <body>
-	<h3>회원가입</h3>
-	<form action="ex4_process02.jsp" method="post">
-		<!-- 입력 양식을 묶어서 보내는 form 태그 -->
-		<!-- 폼 태그 안에는 입력 가능한 태그들을 작성 -->
-		<!-- 폼 태그가 입력한 데이터를 서버로 보내줌 -->
-		<p>아이디 : <input type="text" name="id"> <input type="button" value="아이디 중복 검사"> </p>
-		<p>패스워드 : <input type="password" name="pw"> </p>
-		<p>비밀번호 확인 : <input type="password" name="pw2"></p>
-		<p>이름 : <input type="text" name="name"></p>
-		<p>연락처 : <input type="number" name="phone1">-
-		<input type="number" name="phone2">-
-		<input type="number" name="phone3"></p>
-		
-		<p>성별 :
-		<label for="gender1">남성</label>
-		<input type="radio" id="gender1" name="gender" value="남성">
-		<label for="gender2">여성</label>
-		 <input type="radio" id="gender2" name="gender" value="여성">
-		 </p>
-		<p>취미 : 독서<input type="checkbox" name="hobby" value="독서">
-		운동 <input type="checkbox" name="hobby" value="운동">
-		영화 <input type="checkbox" name="hobby" value="영화"></p>
-		
-		<p>
-		<textarea rows="6" cols="30" name="comment" placeholder="가입인사를 입력해 주세요."></textarea>
-		</p>
-		<p><input type="submit" value="전송"><input type="reset" value="다시쓰기"> </p>
-	</form>
+	<strong>ex1.jsp입니다.</strong>
+	
+	
+<script>
+	// 빈 배열
+	var arr = [];
+	arr[0] = 3;
+	arr[1] = 2;
+	arr[2] = 1;
+	console.log(arr[0]);
+	console.log(arr[1]);
+	console.log(arr[2]);
+</script>
+<script>
+function gugudan(input){
+	for(var i=1; i <= 9 i++){
+		console.log(input +"*"+i+"="+(input*i));
+	}
+	
+}
+
+// prompt를 사용해서 사용자로부터 2~9 사이의 숫자를 입력받아
+// 해당하는 숫자의 구구단을 console/log로 출력하세요
+
+var input = prompt("숫자 입력: ");
+gugudan(input);
+
+</script>
+<script>
+	
+	// 홀수를 입력받았을 경우 alret을 이용해서 홀수입니다를 출력하세요.
+// 	var a = 10;
+// 	console.log("a = "+a);
+	
+// 	a = 3.14;
+// 	console.log("a = "+a);
+	
+// 	a = "문자열";
+// 	console.log("a = "+a);
+	
+	
+// 	var input = prompt("숫자를 입력하세요: ");
+// 	if(input%2==0){
+// 		alert("짝수입니다~")
+// 	}else{
+// 		alert("홀수입니다~")
+// 	}
+	
+</script>	
 </body>
 </html>

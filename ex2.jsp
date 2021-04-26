@@ -1,25 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-<%
-	String tel1 = request.getParameter("tel1");
-	String tel2 = request.getParameter("tel2");
-	String tel3 = request.getParameter("tel3");
-	
-	String tel = tel1 + tel2 + tel3;
-	
-	if(tel1 != null && tel2 != null && tel3 != null){ 
-	out.println("첫번째 연락처의 자리수 = "+ tel1.length()+"<br>");
-	out.println("두번째 연락처의 자리수 = "+ tel2.length()+"<br>");
-	out.println("세번째 연락처의 자리수 = "+ tel3.length()+"<br>");
-	
-	if(tel.length() != 3 || tel2.length() != 4 || tel3.length() !=4){
-		out.println("<h1>연락처를 확인해 주세요</h1>");
-	}
-	// 연락처의 첫 번째 자리수는 3자리여야 합니다/
-	// 연락처 두, 세번째 자리수는 4자리여야 합니다.
-	// 요청 파라미터로 전달받은 연락처가 연락처의 각 자리수를 초과하였을 때
-	// 웹 페이지에 연락처를 확인해 주세요. 라고 출력되도록 하세요.
- 	} %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,34 +6,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form name="frm">
+	<p>이름: <input type="text" name="name"> <br>
+	<label>아이디: <input type="text" name="id"> </label><br>
+	<label>비밀번호: <input type="password" name="pw"> </label><br>
+	<input type="submit" value="전송" onclick="checkForm()">
+	</p>
+</form>
 
-	<h1>연락처 : <%=tel %></h1>
-	
-	<form action="./ex2.jsp" method="get">
-		<p>
-			연락처 :
-			<select name="tel1">
-				<option value="010">010</option>
-				<option value="011">011</option>
-				<option value="016">016</option>
-				<option value="017">017</option>
-				<option value="019">019</option>
-			</select>
-			-
-			<input type="text" name="tel2" maxlength="4" size="4">
-			-
-			<input type="text" name="tel3" maxlength="4" size="4">
-		</p>
-		<p>
-			<input type="submit" value="전송"></p>
-		<select name="city">
-			<option>도시를 선택하세요.</option>
-			<option value="서울">서울특별시</option>
-			<option value="부산">부산광역시</option>
-			<option value="인천">인천광역시</option>
-			<option value="경기">경기도</option>
-			<option value="충청">충청도</option>
-		</select>
-	</form>
+<script>
+// 전송버튼을 클릭했을 때 사용자가 입력한 이름, 아이디, 비밀번호를 alert을 사용해서 출력하세요 
+	function checkForm(){
+		var userName = document.frm.name.value;
+		var userId = document.frm.id.value;
+		var userPwd = document.frm.pw.value;
+		alert("사용자가 입력한 이름은 "+userName+" 입니다.\n"+"사용자가입력한 아이디는 "+userId+" 입니다.\n"+"사용자가 입력한 비밀번호는 "+userPwd+" 입니다.");
+	}
+</script>
 </body>
 </html>

@@ -1,27 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	// response는 서버가 응답할 때 응답과 관련된 ~ 내장객체
+	// 응답하는 데이터의 사용된 자연어가 es 스페인어라고 하는 것1
+	// 브라우저에서 전달받은 텍스트가 스페인어라고 인식하는 것
+	response.setHeader("Content-Language", "es");
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Espa&ntilde;ol</title>
 </head>
 <body>
-<form name="frm">
-	<p>이름: <input type="text" name="name"> <br>
-	<label>아이디: <input type="text" name="id"> </label><br>
-	<label>비밀번호: <input type="password" name="pw"> </label><br>
-	<input type="submit" value="전송" onclick="checkForm()">
-	</p>
-</form>
-
-<script>
-// 전송버튼을 클릭했을 때 사용자가 입력한 이름, 아이디, 비밀번호를 alert을 사용해서 출력하세요 
-	function checkForm(){
-		var userName = document.frm.name.value;
-		var userId = document.frm.id.value;
-		var userPwd = document.frm.pw.value;
-		alert("사용자가 입력한 이름은 "+userName+" 입니다.\n"+"사용자가입력한 아이디는 "+userId+" 입니다.\n"+"사용자가 입력한 비밀번호는 "+userPwd+" 입니다.");
-	}
-</script>
+	<p>Idioma : Espa&ntilde;ol</ </p>
+	<p>&iexcl;Hola Mundo!</p>
 </body>
 </html>

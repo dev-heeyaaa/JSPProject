@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page errorPage="error.jsp" %>
+<%@ page isErrorPage="true" %> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		String value = request.getParameter("a").substring(5);
-	%>
+	<strong>심각한 오류가 발생했습니다.</strong>
+	<p>예외 유형: <%=exception %></p>
 </body>
 </html>

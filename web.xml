@@ -10,6 +10,22 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <filter>
+ 	<filter-name>Filter01</filter-name>
+  	<filter-class>chapter12.AuthenFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>Filter01</filter-name>
+	<url-pattern>/chapter12/filter01_process.jsp</url-pattern>
+  </filter-mapping>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/chapter11/exception_error.jsp</location>
+  </error-page>
+
+  
   <security-role>
   <role-name>role1</role-name>
   

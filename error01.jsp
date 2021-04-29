@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page isErrorPage="true" %> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>인증 실패했습니다.</p>
-	<a href="security01.jsp">관리자 페이지로...</a>
+	<strong>0으로 나눌 수 없습니다.</strong>
+	<p>예외 유형: <%=exception %></p>
 </body>
 </html>

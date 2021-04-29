@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,18 +7,31 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="process.jsp" method="get">
-		<p>
-			<label for="reading">독서</label>
-			<input type="checkbox" name="reading" id="reading" >
-			
-			<label>운동 <input type="checkbox" name="exercise"></label>
-			
-			<label>영화 <input type="checkbox" name="movie"> </label>
-		</p>
-		<p>
-		<input type="submit" value="전송">
-		</p>
-	</form>
+<%
+	String su1 = request.getParameter("su1");
+	String su2 = request.getParameter("su2");
+
+	
+	if(su1 == null || su2 == null){
+		%>
+		<!--  su1 또는 su2가 요청 피라미터로 전달되지 않았을 경우 -->
+		<form action="#" method="get">
+			<p>수1: <input type="text" name="su1"> </p>
+			<p>수2: <input type="text" name="su2"> </p>
+			<input type="submit" value="계산">
+		</form>	
+<%
+	} else{
+%>
+	<%
+		int su1_i = Integer.parseInt(su1);
+		int su2_i = Integer.parseInt(su2); 
+	%>
+		<!-- su1과 su2가 요청 피라미터로 전달되었을 경우 -->
+		<p><%=su1 %> / <%=su2 %> = <%=su1_i / su2_i %></p>
+		<a href="./ex4.jsp">돌아가기...</a>
+<% 
+} 
+%>
 </body>
 </html>

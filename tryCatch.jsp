@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +6,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/JSPBook/chaper11/ex3.jsp">
-		<p>첫번째 수: <input type="text" name="su1"> </p>
-		<p>두번째 수: <input type="text" name="su2"></p>
-		<input type="submit" value="전송">
+	<form action="tryCatch1.jsp" method="get">
+	<label>수1 : <input type="text" name="su1"> </label><br>
+	<label>수2 : <input type="text" name="su2"> </label><br>
+	<input type="submit" value="계산">
 	</form>
 </body>
 </html>

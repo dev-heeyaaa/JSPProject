@@ -15,3 +15,10 @@
    세션 ID를 저장
 3. 다음번 요청부터 request header에 세션 ID를 담아서 전달
 
+
+---------------------------ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+1. 세션 사용 - setAttribute / 생성과 동시에 데이터 저장
+2. 세션에 저장된 데이터 사용 - getAttribute
+3. 세션에 저장된 데이터 삭제 - removeAttribute
+4. 세션 날리기 - invalidate
+5. 세션 타이머 부착 - setMaxInactiveInterval

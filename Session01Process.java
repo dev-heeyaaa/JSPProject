@@ -3,6 +3,7 @@ package chapter13;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,16 +40,15 @@ public class Session01Process extends HttpServlet {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
-		
+		// 1800초 (30분)동안 유지를 한다
 		session.setAttribute("id", id);
 		session.setAttribute("pw", pw);
 		
-		PrintWriter out = response.getWriter();
+		// 세션의 유지시간이 10초가 된다!
+		session.setMaxInactiveInterval(10);
 		
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-		out.println("<strong>success.</strong>");
-		
+		RequestDispatcher dis = request.getRequestDispatcher("/chapter13/session01_success.jsp");
+		dis.forward(request, response);
 	}
 
 	/**

@@ -6,9 +6,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>index</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+	<strong>로그인을 한 사용자만 볼 수 있는 페이지입니다.</strong><br>
+	<strong>로그인을 하지 않은 사용자는 로그인 페이지로 이동합니다.</strong>
+	
+	<hr>
+	
+	<button type="button" onclick="logout()">로그아웃</button>
+	
+	<script>
+	function logout() {
+	// 현재 로그인된 정보를 날리는 거니 파라미터 자체가 필요없다.	
+	$.ajax({
+		url: "/JSPBook/cookie/logout",
+		success: function(){
+			console.log();
+			alert("로그아웃이 되었습니다\n로그인 페이지로 이동합니다.");
+			location.href="/JSPBook/chapter14/login.jsp";
+		}
+	});
+	
+	return false;
+	
+}
+	
+	</script>
 
+	
 </body>
 </html>

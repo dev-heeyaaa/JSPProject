@@ -58,8 +58,52 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 
+	<div>
+		<p>아이디: <input type="text" name="id" > </p>
+		<p>비밀번호: <input type="password" name="pw" ></p>
+		<button type="button" onclick="login()" >로그인</button>
+		
+	</div>
+
+	<script>
+	function login() {
+		// ajax를 사용해서 login_process.jsp를 호출하고
+		// login_process.jsp가 반환하는 결과값을 이용해서
+		// 로그인 성공 시 index.jsp로 이동
+		// 로그인 실패 시 "아이디 또는 비밀번호가 올바르지 않습니다" 출력
+		
+		// 사용자가 input 태그에 입력한 id
+		var id = $("[name=id]").val();
+		// 사용자가 input 태그에 입력한 pw
+		var pw = $("[name=pw]").val();
+		
+		$.ajax({
+			url: "/JSPBook/cookie/login",
+			data: "id="+id+"&pw="+pw,
+			success: function() {
+				// 요청이 성공했을 때의 동작(200번대, 300번대 응답코드가 들어왔을 때)
+				location.href = "/JSPBook/chapter14/index.jsp";
+			},
+			error: function(){
+				// 요청이 실패했을 때의 동작(400, 500번대 응답코드가 들어왔을 때)
+				console.log();
+				alert("아이디 또는 비밀번호가 올바르지 않습니다.");
+			}
+		})
+		
+		return false;
+		
+		// ajax -> jQuery 라이브러리 안에 들어있음
+		// jQuery -> 자바스크립트를 조금 더 편하게 사용해 주는 툴
+		
+		// 브라우저는 HTML, CSS, JavaScript를 갖고있고
+		// jQuery는 갖고있지 않음
+	
+	}
+	</script>
 </body>
 </html>

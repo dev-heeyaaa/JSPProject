@@ -1,0 +1,38 @@
+포워딩 방법 4가지
+
+1. RequestDispatcher 
+	- 페이지의 URL이 바뀌지 않음
+2. sendRedirect -> response.sendRedirect
+	- 페이지의 URL이 바뀜
+3. 헤더에 Location을 담아서 -> 
+	response.addHeader()
+	response.setStatus(300번대 응답코드)
+	- 페이지의 URL이 바뀜
+4. 자바스크립트 코드를 사용해서 -> 직접 명시
+
+	- 페이지의 URL이 바뀜
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SQL : 구조화된 질의문
+	-DDL : 데이터베이스나 테이블을 관리하는 명령어 의미
+		create, alter, drop
+	-DML: 테이블을 관리하는 명령어
+		select, update, insert, delete
+	_DCL(제어어): 사용자의 권한이나 데이터의 변경 여부를 관리하는 명령어 의미
+		grant, revoke, commit, rollback

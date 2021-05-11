@@ -34,11 +34,11 @@
 			var pw = $("[name=pw]").val();
 			
 			$.ajax({
-				url:"/JSPBook/chapter16/login_process.jsp",
+				url:"/JSPBook/member/login",
 				data:"id="+id+"&pw="+pw,
 				type:"post",
 				success: function(){
-					location.href = "/JSPBook/chapter16/main.jsp";
+					location.href = "main.jsp";
 				},
 				error: function(){
 					alert("아이디 또는 비밀번호를 확인하세요.");
